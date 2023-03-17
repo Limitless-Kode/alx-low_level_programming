@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -Wall -Werror -Wextra -pedantic $CFILE.c -o cisfun
+gcc -S $CFILE -o ${CFILE%.c}.s
