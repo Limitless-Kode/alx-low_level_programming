@@ -1,0 +1,4 @@
+#!/bin/bash
+CFILE=$CFILE
+cpp $CFILE > c
+
