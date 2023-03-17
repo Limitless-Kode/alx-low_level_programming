@@ -1,2 +1,2 @@
 #!/bin/bash
-export CFILE=main.c && gcc -Wall -Werror -Wextra -pedantic -std=gnu89 $CFILE -o cisfun
+gcc $CFILE -o cisfun
