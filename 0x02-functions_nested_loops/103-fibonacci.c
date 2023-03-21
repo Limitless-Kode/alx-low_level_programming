@@ -1,28 +1,28 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
-  * sum_even_fibonacci - Calculates the sum of
-  *           even-valued terms in the Fib to limit.
-  *
-  * @limit: The maximum value for Fibonacci to consider.
-  * Return: The sum of even-valued terms in the Fibonacci up to the limit.
-  */
+ * main - Prints the add of the even-valued
+ * fibonacci numbers.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	long int n1, n2, fn, afn;
 
-int sum_even_fibonacci(int limit)
-{
-int sum = 0;
-int prev_fib = 1;
-int curr_fib = 2;
-int next_fib;
-while (curr_fib <= limit)
-{
-if (curr_fib % 2 == 0)
-{
-sum += curr_fib;
-}
-next_fib = prev_fib + curr_fib;
-prev_fib = curr_fib;
-curr_fib = next_fib;
-}
-return (sum);
+	n1 = 1;
+	n2 = 2;
+	fn = afn = 0;
+	while (fn <= 4000000)
+	{
+		fn = n1 + n2;
+		n1 = n2;
+		n2 = fn;
+		if ((n1 % 2) == 0)
+		{
+			afn += n1;
+		}
+	}
+	printf("%ld\n", afn);
+	return (0);
 }
